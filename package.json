@@ -1,0 +1,18 @@
+{
+  "name": "ogp-server",
+  "author": {
+    "name": "Misir Jafarov",
+    "url": "https://themisir.com"
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "open-graph": "^0.2.4"
+  },
+  "scripts": {
+    "start": "node ./server.js"
+  },
+  "bin": {
+    "ogp-server": "server.js"
+  }
+}
