@@ -121,6 +121,12 @@ module.exports = (
             image = url.query.fallback;
           }
 
+          if (array) {
+            image = image.map(item => new URL(item, destUrl).href);
+          } else {
+            image = new URL(image, destUrl).href;
+          }
+
           if (url.query["format"] == "json") {
             res.writeHead(200, "OK");
             res.write(
