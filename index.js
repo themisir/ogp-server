@@ -117,6 +117,10 @@ module.exports = (
         if (image) {
           let array = typeof image === "object" && Array.isArray(image);
 
+          if (!image && url.query.fallback) {
+            image = url.query.fallback;
+          }
+
           if (url.query["format"] == "json") {
             res.writeHead(200, "OK");
             res.write(
