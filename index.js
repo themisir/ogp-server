@@ -112,6 +112,16 @@ module.exports = (
     if (url.path == "/image" && url.query.domain) {
       let destUrl = parseUrl(url.query.domain).path;
       let image = cache.get(destUrl);
+      let baseUrl;
+
+      try {
+        baseUrl = new URL(destUrl);
+      } catch (e) {
+        res.writeHead(400, "Bad Request");
+        res.write(JSON.stringify({ error: "Invalid url" }));
+        res.end();
+        return;
+      }
 
       function respond() {
         if (image) {
@@ -122,9 +132,9 @@ module.exports = (
           }
 
           if (array) {
-            image = image.map(item => new URL(item, destUrl).href);
+            image = image.map(item => new URL(item, baseUrl).href);
           } else {
-            image = new URL(image, destUrl).href;
+            image = new URL(image, baseUrl).href;
           }
 
           if (url.query["format"] == "json") {
