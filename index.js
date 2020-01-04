@@ -109,7 +109,10 @@ module.exports = (
       return;
     }
 
-    if (url.path == "/image" && url.query.domain) {
+    if (
+      (url.path == "/image" || url.path.startsWith("/image/")) &&
+      url.query.domain
+    ) {
       let destUrl = parseUrl(url.query.domain).path;
       let image = cache.get(destUrl);
       let baseUrl;
