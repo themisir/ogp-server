@@ -393,10 +393,10 @@ oauth-sign@~0.9.0:
   resolved "https://registry.yarnpkg.com/oauth-sign/-/oauth-sign-0.9.0.tgz#47a7b016baa68b5fa0ecf3dee08a85c679ac6455"
   integrity sha512-fexhUFFPTGV8ybAtSIGbV6gOkSv8UtRbDBnAyLQw4QPKkgNlsH2ByPGtMUqdWkos6YCRmAqViwgZrJc/mRDzZQ==
 
-open-graph@^0.2.4:
-  version "0.2.4"
-  resolved "https://registry.yarnpkg.com/open-graph/-/open-graph-0.2.4.tgz#659bf9b534e565d31d26d9008a1ac0926c04f4d6"
-  integrity sha512-BqqG87q5mnHBrjgbNoevbEXuClgFWA+0Dz3kwBZlSUrUXpGp/7KdExDpKfP5AF9wKLk0I+zfFUTE0PlpWbMJVA==
+open-graph@^0.2.6:
+  version "0.2.6"
+  resolved "https://registry.yarnpkg.com/open-graph/-/open-graph-0.2.6.tgz#d473d8e4826bb8d4614516bdf0edbc3eed63e8c2"
+  integrity sha512-L4lTD3fcPkNclAZFukhr8ZAF8+kBqXJqUb/HNSdIoxVMTdaqSwSroYdBiFb56yPdr4GrltECiL5lRHYIJbpY/A==
   dependencies:
     cheerio "^0.22.0"
     request "^2.73.0"
